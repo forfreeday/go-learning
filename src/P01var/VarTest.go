@@ -1,4 +1,4 @@
-package chart01
+package P01var
 
 import "fmt"
 

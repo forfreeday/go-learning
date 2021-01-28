@@ -1,0 +1,7 @@
+package main
+
+import "P07pointer"
+
+func main() {
+	P07pointer.PointTest01()
+}

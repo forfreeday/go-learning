@@ -1,4 +1,4 @@
-package chart02
+package P02interface
 
 // 接口
 type Tree interface {

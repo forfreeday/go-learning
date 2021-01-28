@@ -1,4 +1,4 @@
-package pstruct
+package P03struct
 
 import "fmt"
 

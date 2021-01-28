@@ -1,4 +1,4 @@
-package chart04
+package P07pointer
 
 import "fmt"
 
