@@ -23,5 +23,5 @@ func VarTest03() {
 
 func VarTest04() {
 	var n1 int64 = 100
-	fmt.Printf("n1 的数据类型是：%T，占用 %d 字节", n1, unsafe.Sizeof(n1))
+	fmt.Printf("n1 的数据类型是：%T，占用 %d 字节\n", n1, unsafe.Sizeof(n1))
 }

@@ -11,4 +11,6 @@ func Chart01Test() {
 	P01var.VarTest02()
 	P01var.VarTest03()
 	P01var.VarTest04()
+
+	P01var.SwitchTest()
 }
