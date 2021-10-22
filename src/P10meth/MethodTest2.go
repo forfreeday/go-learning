@@ -1,4 +1,4 @@
-package P03struct
+package P10meth
 
 import "fmt"
 
