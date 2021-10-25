@@ -20,6 +20,7 @@ func test2() {
 	//P03struct.StructTest1()
 	//P03struct.StructTest2()
 	//P03struct.StructTest3()
-	P03struct.StructTest31()
+	//P03struct.StructTest31()
+	P03struct.StructTest4()
 
 }

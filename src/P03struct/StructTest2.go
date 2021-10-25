@@ -74,3 +74,14 @@ func StructTest31() {
 	fmt.Printf("Persion1 Address: %p, 内容: %v \n", &person1, person1)
 	fmt.Printf("Persion2 Address: %p, 内容: %v \n", &person2, person2)
 }
+
+//方式4
+func StructTest4() {
+	var person Person
+	person.Name = "方式4"
+	person.Age = 1241234
+
+	var ptr = &person
+	ptr.Name = "ptrName"
+	fmt.Printf("persion.Name=%v, ptr.Name=%v", person.Name, ptr.Name)
+}
