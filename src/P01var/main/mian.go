@@ -14,5 +14,9 @@ func Chart01Test() {
 	//
 	//P01var.SwitchTest()
 	//P01var.ArrayTest()
-	P01var.ArrayTest2()
+	//P01var.ArrayTest2()
+	//P01var.ArrayTest3()
+	//P01var.ArrayTest4()
+	//P01var.ArrayTest5()
+	P01var.ArrayTest6()
 }

@@ -2,6 +2,54 @@ package P01var
 
 import "fmt"
 
+func pointTest(arr *[3]string) {
+	//标准写法
+	(*arr)[0] = "piu piu piu "
+	//go自动优化
+	arr[1] = "bui bui bui"
+	fmt.Printf("(*arr)[0] 地址=%p\n", &(*arr)[0])
+	fmt.Printf("arr[0] 地址=%p\n", &arr[0])
+}
+
+func ArrayTest6() {
+	hens := [...]string{"嗯哼", "啊哈", "哦吼"}
+	pointTest(&hens)
+	fmt.Printf("hens[0]=%s\n", hens[0])
+	fmt.Printf("hens[1]=%s\n", hens[1])
+}
+
+func ArrayTest5() {
+	hens := [...]string{"嗯哼", "啊哈", "哦吼"}
+
+	for index, value := range hens {
+		//这种就类似于 foreach
+		fmt.Printf("index=%d, value=%s\n", index, value)
+		//fmt.Printf("hens=%s\n", hens[index])
+	}
+}
+
+func ArrayTest4() {
+	var arr [4]int
+	fmt.Println(arr)
+	fmt.Printf("arr[0]的地址=%#x\n", &arr[0])
+	fmt.Printf("arr[1]的地址=%#x\n", &arr[1])
+	fmt.Printf("arr[2]的地址=%#x\n", &arr[2])
+	fmt.Printf("arr[2]的地址=%#x\n", &arr[3])
+}
+
+func ArrayTest3() {
+	var hens [6]int
+	hens[0] = 111
+	hens[1] = 222
+	hens[2] = 333
+	//越界
+	//hens[9] = 999
+	for i := 0; i < len(hens); i++ {
+		fmt.Printf("打印数组i=%d, 数据=%d\n", i, hens[i])
+	}
+
+}
+
 func ArrayTest() {
 	var n [10]int /* n 是一个长度为 10 的数组 */
 	var i, j int
