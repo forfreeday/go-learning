@@ -2,6 +2,40 @@ package main
 
 import "fmt"
 
+func test8() {
+	testString := "test@aaa.com"
+	arr := []rune(testString)
+	arr[0] = '北'
+	testString = string(arr)
+	fmt.Println(testString)
+
+}
+
+//string
+func test7() {
+	testString := "test@aaa.com"
+	arr := []byte(testString)
+	arr[0] = 'z'
+	testString = string(arr)
+	fmt.Println(testString)
+
+}
+
+//copy
+func test6() {
+	var a = []int{11, 22, 33, 44}
+	var sliceTest = make([]int, 1)
+	copy(sliceTest, a)
+	fmt.Println(sliceTest)
+}
+
+//append
+func test5() {
+	sliceTest := []int{11, 22, 33, 55}
+	sliceTest = append(sliceTest, 44, 66, 77)
+	fmt.Println(sliceTest)
+}
+
 //for
 func test4() {
 	var sliceTest = make([]int, 5, 20)
@@ -56,5 +90,9 @@ func main() {
 	//test1()
 	//test2()
 	//test3()
-	test4()
+	//test4()
+	//test5()
+	//test6()
+	//test7()
+	test8()
 }
