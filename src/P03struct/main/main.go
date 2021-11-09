@@ -1,8 +1,8 @@
 package main
 
 import (
-	//. "P02interface"
-	//"P03struct"
+	. "P02interface"
+	"P03struct"
 	"P03struct/aa/bb"
 	"fmt"
 )
@@ -10,28 +10,32 @@ import (
 func main() {
 	//test1()
 	//test2()
-	student := test3()
-	fmt.Println(student)
+	//test3()
+	P03struct.Test4()
 }
 
-//
-//func test1() {
-//	tree := TreeImpl{PhoneNumber: 10}
-//	fmt.Println("tree", tree.Call())
-//}
-//
-//func test2() {
-//	//P03struct.StructTest1()
-//	//P03struct.StructTest2()
-//	//P03struct.StructTest3()
-//	//P03struct.StructTest31()
-//	P03struct.StructTest4()
-//}
+func test1() {
+	tree := TreeImpl{PhoneNumber: 10}
+	fmt.Println("tree", tree.Call())
+}
 
-func test3() *bb.Student {
+func test2() {
+	P03struct.StructTest1()
+	P03struct.StructTest2()
+	P03struct.StructTest3()
+	P03struct.StructTest31()
+	P03struct.StructTest4()
+}
+
+func test3getStudent() *bb.Student {
 	student := &bb.Student{
 		Name: "test",
 		Age:  99,
 	}
 	return student
+}
+
+func test3() {
+	student := test3getStudent()
+	fmt.Println(student)
 }

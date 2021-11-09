@@ -20,9 +20,11 @@ func Chart01Test() {
 	//P01var.ArrayTest5()
 	//P01var.ArrayTest6()
 
-	var i interface{}
-	P01var.SwitchTest2(i)
-	P01var.SwitchTest2(21)
-	P01var.SwitchTest2("hello")
-	P01var.SwitchTest2(true)
+	//var i interface{}
+	//P01var.SwitchTest2(i)
+	//P01var.SwitchTest2(21)
+	//P01var.SwitchTest2("hello")
+	//P01var.SwitchTest2(true)
+
+	P01var.SwitchTest()
 }

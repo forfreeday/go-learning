@@ -85,3 +85,19 @@ func StructTest4() {
 	ptr.Name = "ptrName"
 	fmt.Printf("persion.Name=%v, ptr.Name=%v", person.Name, ptr.Name)
 }
+
+type Student struct {
+	Name string
+	Age  int
+}
+
+// 自动类型推断
+func StructTest5() {
+	// 这里没有指明属性是什么，只是按位置输入
+	var stu1 Student = Student{"嗯哼", 99}
+	stu2 := Student{
+		"嗯哼",
+		99,
+	}
+	fmt.Println(stu1, stu2)
+}

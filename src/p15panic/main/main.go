@@ -32,7 +32,7 @@ func test2() {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println("test2 继续执行")
+	fmt.Println("test2 没有继续执行")
 }
 
 func main() {
