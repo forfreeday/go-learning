@@ -15,9 +15,10 @@ func test3() {
 	a = 10
 	fmt.Println(a.IsZero()) // false
 }
-func main() {
-	test3()
-}
+
+//func main() {
+//	test3()
+//}
 
 func test1() {
 	var myTest myInt
