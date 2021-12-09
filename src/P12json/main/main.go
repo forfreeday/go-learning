@@ -1,6 +1,6 @@
 package main
 
-import "P12json"
+import "golearning/src/P12json"
 
 func main() {
 	//P12json.JsonParseTest()

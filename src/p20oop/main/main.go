@@ -81,6 +81,7 @@ func test3() {
 	son2 := Son{Father: Father{Name: "嗯哼", age: 11}}
 	// 指针的是两个地址，是正确的
 	fmt.Println(son)
+	fmt.Println(son2)
 }
 
 func main() {

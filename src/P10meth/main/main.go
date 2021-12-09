@@ -1,8 +1,8 @@
 package main
 
 import (
-	"P10meth"
 	"fmt"
+	"golearning/src/P10meth"
 )
 
 func test1() {

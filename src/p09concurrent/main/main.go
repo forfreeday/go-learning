@@ -1,6 +1,6 @@
 package main
 
-import "p09concurrent"
+import "golearning/src/p09concurrent"
 
 func main() {
 

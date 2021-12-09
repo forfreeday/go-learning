@@ -1,6 +1,6 @@
 package main
 
-import "P01var"
+import "golearning/src/P01var"
 
 func main() {
 	Chart01Test()

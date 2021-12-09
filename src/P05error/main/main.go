@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-import "P05error"
+import "golearning/src/P05error"
 
 func main() {
 	result, err := P05error.Do()

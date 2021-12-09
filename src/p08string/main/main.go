@@ -1,6 +1,6 @@
 package main
 
-import "p08string"
+import "golearning/src/p08string"
 
 func main() {
 

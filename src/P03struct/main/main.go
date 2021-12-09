@@ -1,10 +1,10 @@
 package main
 
 import (
-	. "P02interface"
-	"P03struct"
-	"P03struct/aa/bb"
 	"fmt"
+	. "golearning/src/P02interface"
+	"golearning/src/P03struct"
+	"golearning/src/P03struct/aa/bb"
 )
 
 func main() {

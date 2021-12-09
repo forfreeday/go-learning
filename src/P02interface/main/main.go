@@ -1,8 +1,8 @@
 package main
 
 import (
-	"P02interface"
 	"fmt"
+	"golearning/src/P02interface"
 )
 
 func test1() {
