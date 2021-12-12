@@ -1,6 +1,6 @@
 package P04function
 
-//单返回值
+// FunctionTest1 单返回值
 func FunctionTest1(a int) int {
 
 	return a

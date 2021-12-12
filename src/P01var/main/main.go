@@ -26,5 +26,6 @@ func Chart01Test() {
 	//P01var.SwitchTest2("hello")
 	//P01var.SwitchTest2(true)
 
-	P01var.SwitchTest()
+	//P01var.SwitchTest()
+	P01var.ForLoopTest()
 }

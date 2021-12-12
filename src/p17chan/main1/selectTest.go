@@ -7,15 +7,15 @@ import (
 )
 
 func go1(ch chan string) {
-	for i := 0; i < 50; i++ {
+	for i := 0; i < 5; i++ {
 		ch <- "go1-hello" + strconv.Itoa(i)
-		time.Sleep(1 * time.Second)
+		//time.Sleep(1 * time.Second)
 	}
 }
 func go2(ch chan string) {
-	for i := 0; i < 50; i++ {
+	for i := 0; i < 5; i++ {
 		ch <- "go2-hello" + strconv.Itoa(i)
-		time.Sleep(1 * time.Second)
+		//time.Sleep(1 * time.Second)
 	}
 }
 
@@ -25,7 +25,7 @@ func main() {
 
 	go go1(chan1)
 	go go2(chan2)
-	time.Sleep(1 * time.Second)
+	time.Sleep(100 * time.Millisecond)
 Loop:
 	for {
 		select {
