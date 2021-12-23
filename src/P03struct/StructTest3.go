@@ -8,6 +8,7 @@ type Student2 struct {
 }
 
 func (student Student2) TestMethod() {
+	student.Name = "ttttttttttt"
 	fmt.Println("测试结构体方法绑定: ", student)
 }
 
@@ -27,6 +28,11 @@ func Test4() {
 }
 
 func (student *Student2) TestMethod2() {
+	var i = &student.Age
+	fmt.Println(&student.Age)
+	fmt.Println(*i)
+
+	(*student).Name = "cccc"
 	fmt.Println("测试结构体方法绑定: ", student)
 }
 
@@ -56,6 +62,9 @@ func Test6() {
 		Age:  20,
 	}
 
-	stud.TestMethod2()
+	stud.TestMethod()
 	stud2.TestMethod2()
+
+	fmt.Println(stud)
+	fmt.Println(stud2)
 }

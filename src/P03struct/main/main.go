@@ -11,8 +11,8 @@ func main() {
 	//test1()
 	//test2()
 	//test3()
-	P03struct.Test4()
-	P03struct.Test5()
+	//P03struct.Test4()
+	//P03struct.Test5()
 	P03struct.Test6()
 }
 

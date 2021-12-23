@@ -3,5 +3,6 @@ module golearning
 go 1.16
 
 require (
-	github.com/spf13/cobra v1.2.1 // indirect
+	github.com/BurntSushi/toml v0.4.1
+	//github.com/spf13/cobra v1.2.1 // indirect
 )
