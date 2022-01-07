@@ -48,3 +48,19 @@ func test2() {
 func functionOfSomeType() interface{} {
 	return 3333
 }
+
+type Point struct {
+	x int
+	y int
+}
+
+func test4() {
+	var a interface{}
+	var point Point = Point{1, 2}
+	a = point
+	var b Point
+	// 这里未经过断言，是不可能转换为具体类型的
+	b = a.(Point)
+	fmt.Println(b)
+}
+

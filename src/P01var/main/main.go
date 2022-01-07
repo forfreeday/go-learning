@@ -28,4 +28,5 @@ func Chart01Test() {
 
 	//P01var.SwitchTest()
 	P01var.ForLoopTest()
+	P01var.ForLoopTest()
 }
