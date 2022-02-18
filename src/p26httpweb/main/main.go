@@ -1,13 +1,13 @@
 package main
 
 import (
-	"golearning/src/httpweb"
+	"golearning/src/p26httpweb"
 	"log"
 	"net/http"
 )
 
 func main() {
-	http.HandleFunc("/", httpweb.SayHelloWorld)
+	http.HandleFunc("/", p26httpweb.SayHelloWorld)
 	err := http.ListenAndServe(":9091", nil)
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err)

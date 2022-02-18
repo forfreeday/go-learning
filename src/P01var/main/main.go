@@ -1,13 +1,15 @@
 package main
 
-import "golearning/src/P01var"
+import P01var "golearning/src/P01var"
+import "golearning/src/P07pointer"
 
 func main() {
 	Chart01Test()
 }
 
 func Chart01Test() {
-	//P01var.VarTest01()
+	P01var.VarTest01()
+	P07pointer.PointTest02()
 	//P01var.VarTest02()
 	//P01var.VarTest03()
 	//P01var.VarTest04()
@@ -27,6 +29,6 @@ func Chart01Test() {
 	//P01var.SwitchTest2(true)
 
 	//P01var.SwitchTest()
-	P01var.ForLoopTest()
-	P01var.ForLoopTest()
+	//P01var.ForLoopTest()
+	//P01var.ForLoopTest()
 }

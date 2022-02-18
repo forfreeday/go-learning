@@ -1,4 +1,4 @@
-package httpweb
+package p26httpweb
 
 import (
 	"fmt"

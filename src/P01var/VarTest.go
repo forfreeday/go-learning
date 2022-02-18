@@ -1,4 +1,4 @@
-package P01var
+package p01var
 
 import (
 	"fmt"
