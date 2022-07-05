@@ -14,5 +14,5 @@ func SayHelloWorld(w http.ResponseWriter, r *http.Request) {
 	for k, v := range r.Form {
 		fmt.Println(k, ":", strings.Join(v, ""))
 	}
-	fmt.Fprintf(w, "你好，学院君！") // 发送响应到客户端
+	fmt.Fprintf(w, "你好，嗯哼！") // 发送响应到客户端
 }
