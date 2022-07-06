@@ -89,7 +89,7 @@ func test3() {
 	var testChan = make(chan string)
 	//发送的阻塞的，所在需要使用协程
 	go func() {
-		//testChan <- "send test message"
+		testChan <- "send test message"
 	}()
 	str := <-testChan
 
@@ -97,31 +97,46 @@ func test3() {
 }
 
 //创建 channel
-func test1() {
-	////使用前必须先 make
-	//var testChan = make(chan string)
-	////创建一个 int类型，容量100的chan
-	//var testChanInt = make(chan int, 100)
-	//
-	//
-	//ch1 := make(chan int)                 // 创建一个整型类型的通道
-	//ch2 := make(chan interface{})         // 创建一个空接口类型的通道, 可以存放任意格式
-	//
-	//type Equip struct{ /* 一些字段 */ }
-	//ch2 := make(chan *Equip)             // 创建Equip指针类型的通道, 可以存放*Equip
+func test11() {
+	//使用前必须先 make
+	var testChan = make(chan string)
+	//创建一个 int类型，容量100的chan
+	var testChanInt = make(chan int, 100)
+	ch1 := make(chan int)         // 创建一个整型类型的通道
+	ch2 := make(chan interface{}) // 创建一个空接口类型的通道, 可以存放任意格式
+	type Equip struct { /* 一些字段 */
+	}
+	ch3 := make(chan *Equip) // 创建Equip指针类型的通道, 可以存放*Equip
+
+	fmt.Println(<-testChan)
+	fmt.Println(<-testChanInt)
+	fmt.Println(<-ch1)
+	fmt.Println(<-ch2)
+	fmt.Println(<-ch3)
 }
 
+// 创建有缓冲通道
+func test1() {
+	// 1 代表缓冲区大小，如果不使用1 就是无缓冲通道
+	ch1 := make(chan int, 1)
+	ch1 <- 100
+	println(<-ch1)
+}
+
+// 创建无缓冲通道
+// 这个是反例，无缓冲通道需要配合协程
 func test2() {
 	ch1 := make(chan int) // 创建一个整型类型的通道
 	ch1 <- 100
-	fmt.Println(<-ch1)
+	//fmt.Println(<-ch1)
 }
 
 func main() {
+	//test1()
 	//test2()
 	//test3()
 	//test4()
 	//test5()
-	//test6()
+	test6()
 	//test7()
 }
