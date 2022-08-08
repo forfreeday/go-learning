@@ -15,7 +15,7 @@ var (
 
 func Config() *config.TomlConfig {
 	once.Do(func() {
-		filePath, err := filepath.Abs("/Users/liukai/workspaces/go/go-learning/src/p24toml/toml/config.toml")
+		filePath, err := filepath.Abs("/Users/liukai/workspaces/go/my-project/go-learning/src/p24toml/toml/config.toml")
 		if err != nil {
 			panic(err)
 		}
