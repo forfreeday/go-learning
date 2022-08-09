@@ -2,7 +2,9 @@ package p26httpweb
 
 import (
 	"fmt"
+	"log"
 	"net/http"
+	"os/exec"
 	"strings"
 )
 
@@ -15,4 +17,22 @@ func SayHelloWorld(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(k, ":", strings.Join(v, ""))
 	}
 	fmt.Fprintf(w, "你好，嗯哼！") // 发送响应到客户端
+}
+
+func RunShell(w http.ResponseWriter, r *http.Request) {
+	cmd := exec.Command("ls", "-l")
+	output, err := cmd.CombinedOutput()
+	if err != nil {
+		log.Fatalf("cmd.Run() failed with %s\n", err)
+	}
+	fmt.Fprintf(w, "combined out:\n%s\n", string(output)) // 发送响应到客户端
+}
+
+func RunDailyBuild(w http.ResponseWriter, r *http.Request) {
+	cmd := exec.Command("sh /data/workspace/docker_workspace/new-stest_daily_task.sh ", "solc-0.8.11", ">/data/workspace/docker_workspace/stest_shell.log 2>&1 < /dev/null &")
+	output, err := cmd.CombinedOutput()
+	if err != nil {
+		log.Fatalf("cmd.Run() failed with %s\n", err)
+	}
+	fmt.Fprintf(w, "combined out:\n%s\n", string(output)) // 发送响应到客户端
 }
