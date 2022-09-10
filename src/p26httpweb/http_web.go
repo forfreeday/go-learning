@@ -1,6 +1,7 @@
 package p26httpweb
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
@@ -19,6 +20,7 @@ func SayHelloWorld(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "你好，嗯哼！") // 发送响应到客户端
 }
 
+// RunShell 执行 shell 操作
 func RunShell(w http.ResponseWriter, r *http.Request) {
 	cmd := exec.Command("ls", "-l")
 	output, err := cmd.CombinedOutput()
@@ -28,11 +30,20 @@ func RunShell(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "combined out:\n%s\n", string(output)) // 发送响应到客户端
 }
 
-func RunDailyBuild(w http.ResponseWriter, r *http.Request) {
-	cmd := exec.Command("sh /data/workspace/docker_workspace/new-stest_daily_task.sh ", "solc-0.8.11", ">/data/workspace/docker_workspace/stest_shell.log 2>&1 < /dev/null &")
-	output, err := cmd.CombinedOutput()
-	if err != nil {
-		log.Fatalf("cmd.Run() failed with %s\n", err)
+type Response struct {
+	ResponseType string `json:"response_type"`
+	Text         string `json:"text"`
+}
+
+func RespJson(w http.ResponseWriter, r *http.Request) {
+	response := &Response{
+		"in_channel",
+		"调用daily build 成功",
 	}
-	fmt.Fprintf(w, "combined out:\n%s\n", string(output)) // 发送响应到客户端
+	result, err := json.Marshal(response)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(string(result))
+	fmt.Fprintf(w, string(result)) // 发送响应到客户端
 }
