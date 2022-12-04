@@ -57,8 +57,8 @@ func readFile() {
 	fmt.Printf("File constant: \n%s", file)
 }
 
-func main() {
-	// readFile()
-	// openFile()
-	buffReader()
-}
+//func main() {
+//	// readFile()
+//	// openFile()
+//	buffReader()
+//}
