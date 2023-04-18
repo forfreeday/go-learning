@@ -7,7 +7,8 @@ func main() {
 }
 
 func Chart01Test() {
-	p01var.VarTest01()
+	//p01var.VarTest01()
+	p01var.ArrayTest7()
 	//p01var.VarTest02()
 	//p01var.VarTest03()
 	//p01var.VarTest04()

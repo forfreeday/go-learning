@@ -86,3 +86,11 @@ func ArrayTest2() {
 		fmt.Printf("balance3[%d] = %f\n", k, balance3[k])
 	}
 }
+
+func ArrayTest7() {
+	balance := [10]string{"stress-bot", "deploy", "branch", "test1", "test2"}
+	fmt.Printf("param is: %s", balance[2:])
+	for i := 0; i < len(balance); i++ {
+
+	}
+}
