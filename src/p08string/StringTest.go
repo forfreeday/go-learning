@@ -1,6 +1,9 @@
 package p08string
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func TestString() {
 
@@ -23,4 +26,11 @@ func TestString() {
 
 	var address string = "Hello World 北京"
 	fmt.Println(address)
+}
+
+func Test01Trim() {
+	test := "<https://test.com>"
+	result := strings.Trim(test, "<")
+	result = strings.Trim(result, ">")
+	fmt.Printf("result: %s", result)
 }
